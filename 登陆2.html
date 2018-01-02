@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+	<script src="Swiper-3.4.2/jquery-3.1.0.js"></script>
+	<script>
+var url=window.location.href;
+    spstr = url.split('?');
+	//alert(spstr.length);
+    var pwd=spstr[spstr.length-1];
+	var id=spstr[spstr.length-2];
+	if(id==''){alert("账号不得为空");window.location.href="sign_up.html";}
+	if(pwd==''){alert("密码不得为空");window.location.href="sign_up.html";}
+	//alert(id);
+var url="http://172.24.10.175/workout/api.php/login/tel/"+id+"/password/"+pwd; 
+	$.ajax({
+		type : 'post',
+		url : url,
+		cache : false,
+		dataType: 'jsonp',
+		success : function(data) {
+		if(data.id>0){
+			 //  $.session.set('username', id);
+			   //  $.session.set('password', pwd);	   	  
+			window.location.href="1.html";
+			}
+			else{alert("账号或密码不正确");
+		window.location.href="sign_up.html";} 
+		}
+	});
+
+
+
+	
+	</script>
+</head>
+
+<body>
+
+</body>
+
+
+	
+	
+
+</html>
