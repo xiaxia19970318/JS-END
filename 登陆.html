@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta name="viewport" content="initial-scale=1,maximum-scale=1, minimum-scale=1">
+	<meta charset="UTF-8">
+	<script src="Swiper-3.4.2/jquery-3.1.0.js"></script>
+	<link rel="stylesheet" href="css/font-awesome.css">
+	<title>登录</title>
+
+	<script>
+		var deviceWidth=document.documentElement.clientWidth;
+		if(deviceWidth>750)
+			deviceWidth=750;
+		document.documentElement.style.fontSize=deviceWidth/7.5+'px';
+	</script>
+	<style>
+		*{padding:0;margin:0;font-family: 'Adobe 黑体 Std';}
+		html{background: #f2f4f3;}
+		a{text-decoration: none;}
+        body,html{margin: 0;padding:0;width:100%;height:100%;font-size:14px;background:url(02.jpg) no-repeat;
+        	background-size: 100%;}
+   		form{display: flex;flex-direction: column;justify-content: center;align-items: center;padding-top:4.5rem;}
+   		#user,#psd{background: rgba(118,118,118,1.00);border:none;color:#c1c1c1;font-size: .21rem;text-align: center;width:6rem;height:.88rem;border-bottom:1px solid #898989;margin-bottom:.3rem;
+		border-radius:15px;}
+   		#dl{background: rgba(28,255,195,1.00);width:6rem;height:.88rem;border:none;color: white;font-size:.24rem;border-radius:15px;font-family: '方正正中黑简体'}
+   		.qita{display: flex;justify-content: space-between;width:6rem;height:.88rem;}
+   		.qita a{color:#f23e57;}
+   		.qitafangshi a{color:#9c9c9c;}
+		
+		
+		
+		
+		
+		
+		
+		
+		
+body{
+	background-color:#f8f8f8;
+}
+.top img{
+	width:20%;
+	height:20%;
+	margin-left:38%;
+	margin-top:30%;
+}
+	</style>
+
+</head>
+<body class="Site">
+
+<div class="top">
+
+</div>
+
+
+   <form action="">
+		<input type="tel" id="user" placeholder="请输入用户账号">
+		<input type="password" placeholder="请输入用户密码" id="psd">
+		<input type="submit" id="dl" value="登录"  onClick="tel()"/>
+		<div class="qita">
+	
+			<div class="zhuce"><a href="register.html">新用户注册</a></div>	
+		</div>
+		<div class="qitafangshi">
+			<a href="else_sign_up.html">切换到快捷登录模式</a>
+		</div>
+	</form>
+		<script>
+function tel(){
+ var tel=document.getElementById("user").value;
+var password=document.getElementById("psd").value;
+ var url="doSignUp.html?"+tel+"?"+password;
+  window.open(url); 
+}
+
+	</script>
+</body>
+</html>
