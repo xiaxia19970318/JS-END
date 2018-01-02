@@ -10,8 +10,8 @@ var url=window.location.href;
 	//alert(spstr.length);
     var pwd=spstr[spstr.length-1];
 	var id=spstr[spstr.length-2];
-	if(id==''){alert("账号不得为空");window.location.href="sign_up.html";}
-	if(pwd==''){alert("密码不得为空");window.location.href="sign_up.html";}
+	if(id==''){alert("账号不得为空");window.location.href="登陆.html";}
+	if(pwd==''){alert("密码不得为空");window.location.href="登陆.html";}
 	//alert(id);
 var url="http://172.24.10.175/workout/api.php/login/tel/"+id+"/password/"+pwd; 
 	$.ajax({
